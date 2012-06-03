@@ -42,6 +42,7 @@ public class App {
 			String outText = "Hello " + value;
 			greeting.setGreetingWord(outText);
 			greeting.setAddressee(value.toString());
+			entityManager.persist(greeting);
 
 			System.out.println("Outtext = " + outText);
 			output.collect(value, new Text(outText));
